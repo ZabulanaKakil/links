@@ -91,6 +91,11 @@
           "name": "Dreamers Den — Event Management",
           "url": "https://zabulanakakil.github.io/dreamers-den-event-management/",
           "icon": "event"
+        },
+        {
+          "name": "Dreamers Den — Parts Supply",
+          "url": "https:www.dreamersden.org",
+          "icon": "website"
         }
       ]
     }
