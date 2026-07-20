@@ -1,0 +1,98 @@
+{
+  "siteTitle": "Capt Tanvir Nahian's Links",
+  "sections": [
+    {
+      "id": "projects",
+      "title": "Projects Online",
+      "links": [
+        {
+          "name": "worldnews",
+          "url": "https://zabulanakakil.github.io/worldnews/",
+          "icon": "news"
+        }
+      ]
+    },
+    {
+      "id": "contacts",
+      "title": "Contacts",
+      "links": [
+        {
+          "name": "Portfolio",
+          "url": "https://zabulanakakil.github.io/Porfolio/",
+          "displayUrl": "My Portfolio",
+          "icon": "portfolio"
+        },
+        {
+          "name": "Mobile",
+          "url": "tel:+8801790136979",
+          "displayUrl": "+8801790136979",
+          "icon": "phone"
+        }, {
+          "name": "Mobile",
+          "url": "tel:+8801608892998",
+          "displayUrl": "+8801608892998",
+          "icon": "phone"
+        },
+        {
+          "name": "WhatsApp",
+          "url": "https://wa.me/8801790136979",
+          "displayUrl": "+8801790136979",
+          "icon": "whatsapp"
+        },
+        {
+          "name": "Gmail — Personal",
+          "url": "mailto:zabulanakakil@gmail.com",
+          "displayUrl": "zabulanakakil@gmail.com",
+          "icon": "gmail"
+        },
+        {
+          "name": "Gmail — Official",
+          "url": "mailto:officialtanvirnahian@gmail.com",
+          "displayUrl": "officialtanvirnahian@gmail.com",
+          "icon": "email"
+        },
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/tanvir.nahian.96",
+          "displayUrl": "Tanvir Nahian",
+          "icon": "facebook"
+        },
+        {
+          "name": "Facebook Page",
+          "url": "https://www.facebook.com/guavanovitch",
+          "displayUrl": "Capt Guavano",
+          "icon": "facebook-page"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/tanvirnahian",
+          "displayUrl": "@tanvirnahian",
+          "icon": "instagram"
+        },
+        {
+          "name": "Discord",
+          "url": "https://discord.com/users/guavanovitch",
+          "displayUrl": "@guavanovitch",
+          "icon": "discord"
+        },
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/capt-tanvir-nahian",
+          "displayUrl": "Capt Tanvir Nahian",
+          "icon": "linkedin"
+        }
+      ]
+    },
+    {
+      "id": "office",
+      "title": "Office Websites",
+      "links": [
+        {
+          "name": "Dreamers Den — Event Management",
+          "url": "https://zabulanakakil.github.io/dreamers-den-event-management/",
+          "icon": "event"
+        }
+      ]
+    }
+  ]
+}

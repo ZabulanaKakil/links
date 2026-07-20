@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tanvir Nahian Links — Projects, contacts, and office websites in one place.">
+  <title>Tanvir Nahian Links</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="bg__blob bg__blob--1"></div>
+    <div class="bg__blob bg__blob--2"></div>
+    <div class="bg__blob bg__blob--3"></div>
+  </div>
+
+  <main class="page">
+    <header class="hero">
+      <h1 class="hero__title" id="site-title">Tanvir Nahian Links</h1>
+      <p class="hero__subtitle">Projects, contacts, and office sites</p>
+    </header>
+
+    <div id="links-root" class="links-root" aria-live="polite">
+      <p class="loading">Loading links…</p>
+    </div>
+
+    <footer class="footer">
+      <p>Updated via GitHub</p>
+    </footer>
+  </main>
+
+  <div id="admin-overlay" class="admin-overlay" hidden aria-hidden="true">
+    <div class="admin-panel" role="dialog" aria-modal="true" aria-labelledby="admin-title">
+      <div class="admin-panel__header">
+        <h2 id="admin-title" class="admin-title">Edit Links</h2>
+        <button type="button" id="admin-close" class="admin-close" aria-label="Close">&times;</button>
+      </div>
+
+      <div class="admin-panel__body">
+        <div id="admin-password" class="admin-password">
+          <p class="admin-subtitle">Enter password to manage your links.</p>
+          <form id="admin-password-form">
+            <input type="password" id="admin-password-input" class="admin-input" placeholder="Password" autocomplete="current-password" required>
+            <p id="admin-password-error" class="admin-error" hidden>Incorrect password.</p>
+            <button type="submit" class="admin-btn admin-btn--primary">Unlock</button>
+          </form>
+        </div>
+
+        <div id="admin-editor" class="admin-editor" hidden>
+          <div class="admin-editor__header">
+            <p class="admin-subtitle admin-subtitle--flush">Add or edit links, pick icons, then save. Use reorder mode to change order and categories.</p>
+            <button type="button" id="admin-lock" class="admin-btn admin-btn--ghost">Lock</button>
+          </div>
+          <p id="admin-save-status" class="admin-status"></p>
+
+          <div id="admin-edit-panel">
+            <div id="admin-links-editor" class="admin-links-editor"></div>
+            <div class="admin-actions admin-actions--edit">
+              <button type="button" id="admin-save" class="admin-btn admin-btn--primary">Save to GitHub</button>
+              <button type="button" id="admin-reorder-mode" class="admin-btn admin-btn--ghost">Reorder links</button>
+              <button type="button" id="admin-discard" class="admin-btn admin-btn--ghost">Discard changes</button>
+              <button type="button" id="admin-export" class="admin-btn admin-btn--ghost">Download backup</button>
+            </div>
+          </div>
+
+          <div id="admin-reorder-panel" class="admin-reorder-panel" hidden>
+            <p class="admin-reorder-hint">Move links up or down, or change category to shift them between sections.</p>
+            <div id="admin-reorder-editor" class="admin-reorder-editor"></div>
+            <div class="admin-actions admin-actions--reorder">
+              <button type="button" id="admin-save-layout" class="admin-btn admin-btn--primary">Save current layout</button>
+              <button type="button" id="admin-back-edit" class="admin-btn admin-btn--ghost">Return to edit mode</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/admin-config.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
