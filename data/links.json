@@ -1,5 +1,5 @@
 {
-  "siteTitle": "Capt Tanvir Nahian's Links",
+  "siteTitle": "Captain Tanvir Nahian's Links",
   "sections": [
     {
       "id": "projects",
@@ -23,33 +23,22 @@
           "icon": "portfolio"
         },
         {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/capt-tanvir-nahian",
+          "displayUrl": "Capt Tanvir Nahian",
+          "icon": "linkedin"
+        },
+        {
           "name": "Mobile",
           "url": "tel:+8801790136979",
           "displayUrl": "+8801790136979",
           "icon": "phone"
-        }, {
-          "name": "Mobile",
-          "url": "tel:+8801608892998",
-          "displayUrl": "+8801608892998",
-          "icon": "phone"
-        },
-        {
-          "name": "WhatsApp",
-          "url": "https://wa.me/8801790136979",
-          "displayUrl": "+8801790136979",
-          "icon": "whatsapp"
-        },
-        {
-          "name": "Gmail — Personal",
-          "url": "mailto:zabulanakakil@gmail.com",
-          "displayUrl": "zabulanakakil@gmail.com",
-          "icon": "gmail"
         },
         {
           "name": "Gmail — Official",
           "url": "mailto:officialtanvirnahian@gmail.com",
           "displayUrl": "officialtanvirnahian@gmail.com",
-          "icon": "email"
+          "icon": "gmail"
         },
         {
           "name": "Facebook",
@@ -58,10 +47,10 @@
           "icon": "facebook"
         },
         {
-          "name": "Facebook Page",
-          "url": "https://www.facebook.com/guavanovitch",
-          "displayUrl": "Capt Guavano",
-          "icon": "facebook-page"
+          "name": "WhatsApp",
+          "url": "https://wa.me/8801790136979",
+          "displayUrl": "+8801790136979",
+          "icon": "whatsapp"
         },
         {
           "name": "Instagram",
@@ -76,25 +65,61 @@
           "icon": "discord"
         },
         {
-          "name": "LinkedIn",
-          "url": "https://www.linkedin.com/in/capt-tanvir-nahian",
-          "displayUrl": "Capt Tanvir Nahian",
-          "icon": "linkedin"
+          "name": "Facebook Page - Streaming",
+          "url": "https://www.facebook.com/guavanovitch",
+          "displayUrl": "Capt Guavano",
+          "icon": "facebook-page"
+        },
+        {
+          "name": "Alternate Mobile",
+          "url": "tel:+8801608892998",
+          "displayUrl": "+8801608892998",
+          "icon": "phone"
+        },
+        {
+          "name": "Gmail — Personal",
+          "url": "mailto:zabulanakakil@gmail.com",
+          "displayUrl": "zabulanakakil@gmail.com",
+          "icon": "gmail"
         }
       ]
     },
     {
       "id": "office",
-      "title": "Office Websites",
+      "title": "Office Websites and Links",
       "links": [
         {
-          "name": "Dreamers Den — Event Management",
+          "name": "Dreamers Den — Event Management (Website)",
           "url": "https://zabulanakakil.github.io/dreamers-den-event-management/",
           "icon": "event"
         },
         {
-          "name": "Dreamers Den — Parts Supply",
+          "name": "Dreamers Den — Parts Supply (Website)",
           "url": "https://www.dreamersden.org",
+          "icon": "globe"
+        },
+        {
+          "name": "Sweet Dream Agro Farm (Website)",
+          "url": "",
+          "displayUrl": "coming soon",
+          "icon": "globe"
+        },
+        {
+          "name": "Sweet Dream Agro Farm (Facebook Page)",
+          "url": "https://www.facebook.com/share/19CexmnNnZ/",
+          "displayUrl": "Sweet Dream Agro Farm",
+          "icon": "facebook-page"
+        },,
+        {
+          "name": "Dreamer's Construction (Facebook Page)",
+          "url": "",
+          "displayUrl": "coming soon",
+          "icon": "facebook-page"
+        }
+        {
+          "name": "Dreamer's Construction (Website)",
+          "url": "",
+          "displayUrl": "coming soon",
           "icon": "globe"
         }
       ]
