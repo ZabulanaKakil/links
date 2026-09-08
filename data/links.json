@@ -123,6 +123,32 @@
           "icon": "globe"
         }
       ]
-    }
+    },
+    {
+      "id": "games",
+      "title": "Game Projects",
+      "links": [
+        {
+          "name": "Jurassic Park",
+          "url": "https://makeplay.ai/p/qtqy58dege",
+          "icon": "globe"
+        },
+        {
+          "name": "Jurassic Survival and TD",
+          "url": "https://makeplay.ai/p/wrnu2j8nfz",
+          "icon": "globe"
+        },
+        {
+          "name": "Jurassic Empires",
+          "url": "https://makeplay.ai/p/m5p5du6k3g",
+          "icon": "globe"
+        },
+        {
+          "name": "Age of Dinosaurs",
+          "url": "https://makeplay.ai/p/823y8zr6uc",
+          "icon": "globe"
+        }
+      ]
+    },
   ]
 }
