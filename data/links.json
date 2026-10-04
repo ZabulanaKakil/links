@@ -1,17 +1,7 @@
 {
-  "siteTitle": "Captain Tanvir Nahian's Links",
+  "siteTitle": "Captain Tanvir Nahian Swapnil's Links",
   "sections": [
-    {
-      "id": "projects",
-      "title": "Projects Online",
-      "links": [
-        {
-          "name": "worldnews",
-          "url": "https://zabulanakakil.github.io/worldnews/",
-          "icon": "news"
-        }
-      ]
-    },
+    
     {
       "id": "contacts",
       "title": "Contacts",
@@ -147,6 +137,22 @@
           "name": "Age of Dinosaurs",
           "url": "https://makeplay.ai/p/823y8zr6uc",
           "icon": "globe"
+        },
+        {
+          "name": "Dream Agro and Shop",
+          "url": "https://makeplay.ai/p/5j3scasc3z",
+          "icon": "globe"
+        }
+      ]
+    },
+    {
+      "id": "projects",
+      "title": "Projects Online",
+      "links": [
+        {
+          "name": "worldnews",
+          "url": "https://zabulanakakil.github.io/worldnews/",
+          "icon": "news"
         }
       ]
     }
