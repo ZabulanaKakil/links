@@ -18,7 +18,8 @@ window.LinksIcons = (function () {
     { id: "gmail", label: "Gmail", set: "simple-icons", icon: "gmail", color: "EA4335" },
     { id: "youtube", label: "YouTube", set: "simple-icons", icon: "youtube", color: "FF0000" },
     { id: "x", label: "X / Twitter", set: "simple-icons", icon: "x", color: "000000" },
-    { id: "telegram", label: "Telegram", set: "simple-icons", icon: "telegram", color: "26A5E4" }
+    { id: "telegram", label: "Telegram", set: "simple-icons", icon: "telegram", color: "26A5E4" },
+    { id: "game", label: "Game", set: "mdi", icon: "gamepad-variant", color: "7c3aed" }
   ];
 
   var byId = {};
@@ -42,10 +43,15 @@ window.LinksIcons = (function () {
     return (byId[iconId] || byId.link).label;
   }
 
+  function getColor(iconId) {
+    return (byId[iconId] || byId.link).color;
+  }
+
   return {
     pool: pool,
     getUrl: getUrl,
     getLabel: getLabel,
+    getColor: getColor,
     defaultId: "link"
   };
 })();

@@ -20,6 +20,10 @@
       clean.displayUrl = link.displayUrl.trim();
     }
 
+    if (link.hidden === true) {
+      clean.hidden = true;
+    }
+
     return clean;
   }
 
@@ -27,11 +31,17 @@
     return {
       siteTitle: data.siteTitle || "Tanvir Nahian Links",
       sections: (data.sections || []).map(function (section) {
-        return {
+        const clean = {
           id: section.id,
           title: section.title,
           links: (section.links || []).map(normalizeLink)
         };
+
+        if (section.hidden === true) {
+          clean.hidden = true;
+        }
+
+        return clean;
       })
     };
   }
@@ -48,11 +58,17 @@
       .replace(/\/$/, "");
   }
 
-  function createAvatar(name) {
+  function applyIconWell(el, iconId) {
+    const hex = window.LinksIcons.getColor(iconId);
+    el.style.backgroundColor = "#" + hex + "1f";
+  }
+
+  function createAvatar(name, iconId) {
     const avatar = document.createElement("span");
     avatar.className = "link-card__avatar";
     avatar.textContent = getInitial(name);
     avatar.setAttribute("aria-hidden", "true");
+    applyIconWell(avatar, iconId);
     return avatar;
   }
 
@@ -63,8 +79,9 @@
     img.src = window.LinksIcons.getUrl(iconId);
     img.alt = "";
     img.loading = "lazy";
+    applyIconWell(img, iconId);
     img.addEventListener("error", function onError() {
-      img.replaceWith(createAvatar(link.name));
+      img.replaceWith(createAvatar(link.name, iconId));
     });
     return img;
   }
@@ -94,11 +111,12 @@
     return icon;
   }
 
-  function createLinkCard(link) {
+  function createLinkCard(link, rowIndex) {
     const hasUrl = Boolean(link.url && link.url.trim());
 
     const card = document.createElement(hasUrl ? "a" : "div");
     card.className = "link-card" + (hasUrl ? "" : " link-card--inactive");
+    card.style.setProperty("--i", String(rowIndex || 0));
 
     if (hasUrl) {
       card.href = link.url;
@@ -139,7 +157,21 @@
 
     root.replaceChildren();
 
+    let rowIndex = 0;
+
     currentData.sections.forEach(function (section) {
+      if (section.hidden === true) {
+        return;
+      }
+
+      const visibleLinks = section.links.filter(function (link) {
+        return link.hidden !== true;
+      });
+
+      if (!visibleLinks.length) {
+        return;
+      }
+
       const sectionEl = document.createElement("section");
       sectionEl.className = "section";
       sectionEl.id = section.id;
@@ -151,9 +183,10 @@
       const list = document.createElement("ul");
       list.className = "section__list";
 
-      section.links.forEach(function (link) {
+      visibleLinks.forEach(function (link) {
         const item = document.createElement("li");
-        item.appendChild(createLinkCard(link));
+        item.appendChild(createLinkCard(link, rowIndex));
+        rowIndex += 1;
         list.appendChild(item);
       });
 

@@ -124,11 +124,22 @@
 
     data.sections.forEach(function (section, sectionIndex) {
       const block = document.createElement("div");
-      block.className = "admin-section";
+      block.className = "admin-section" + (section.hidden ? " admin-section--hidden" : "");
+
+      const header = document.createElement("div");
+      header.className = "admin-section__header";
 
       const title = document.createElement("h3");
       title.className = "admin-section__title";
       title.textContent = section.title;
+
+      if (section.hidden) {
+        title.appendChild(createHiddenBadge());
+      }
+
+      header.append(title, createHideToggle(section.hidden === true, function (checked) {
+        setSectionHidden(sectionIndex, checked);
+      }));
 
       const list = document.createElement("div");
       list.className = "admin-section__list";
@@ -145,7 +156,7 @@
         addLink(sectionIndex);
       });
 
-      block.append(title, list, addBtn);
+      block.append(header, list, addBtn);
       linksEditor.appendChild(block);
     });
   }
@@ -165,6 +176,10 @@
       const title = document.createElement("h3");
       title.className = "admin-section__title";
       title.textContent = section.title;
+
+      if (section.hidden) {
+        title.appendChild(createHiddenBadge());
+      }
 
       const list = document.createElement("div");
       list.className = "admin-reorder-list";
@@ -200,6 +215,10 @@
     const name = document.createElement("span");
     name.className = "admin-reorder-row__name";
     name.textContent = link.name;
+
+    if (link.hidden) {
+      name.appendChild(createHiddenBadge());
+    }
 
     const url = document.createElement("span");
     url.className = "admin-reorder-row__url";
@@ -291,9 +310,31 @@
     return wrap;
   }
 
+  function createHiddenBadge() {
+    const badge = document.createElement("span");
+    badge.className = "admin-badge";
+    badge.textContent = "Hidden";
+    return badge;
+  }
+
+  function createHideToggle(checked, onChange) {
+    const label = document.createElement("label");
+    label.className = "admin-hide";
+
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.checked = checked;
+    input.addEventListener("change", function () {
+      onChange(input.checked);
+    });
+
+    label.append(input, document.createTextNode("Hidden"));
+    return label;
+  }
+
   function createLinkEditor(sectionIndex, linkIndex, link) {
     const row = document.createElement("div");
-    row.className = "admin-link";
+    row.className = "admin-link" + (link.hidden ? " admin-link--hidden" : "");
 
     row.innerHTML =
       '<label class="admin-field"><span>Name</span><input type="text" data-field="name" value="' +
@@ -307,12 +348,22 @@
       '" placeholder="@username or custom label"></label>' +
       '<button type="button" class="admin-btn admin-btn--danger admin-link__remove">Remove</button>';
 
+    const removeButton = row.querySelector(".admin-link__remove");
     row.insertBefore(
       createIconPicker(sectionIndex, linkIndex, link.icon || window.LinksIcons.defaultId),
-      row.querySelector(".admin-link__remove")
+      removeButton
     );
+    const hideToggle = createHideToggle(link.hidden === true, function (checked) {
+      updateLinkField(sectionIndex, linkIndex, "hidden", checked);
+    });
 
-    row.querySelectorAll("input").forEach(function (input) {
+    if (link.hidden) {
+      hideToggle.appendChild(createHiddenBadge());
+    }
+
+    row.insertBefore(hideToggle, removeButton);
+
+    row.querySelectorAll("input[data-field]").forEach(function (input) {
       input.addEventListener("input", function () {
         updateLinkField(sectionIndex, linkIndex, input.dataset.field, input.value, false);
       });
@@ -357,13 +408,35 @@
 
   function updateLinkField(sectionIndex, linkIndex, field, value, reRender) {
     const data = getMutableData();
-    data.sections[sectionIndex].links[linkIndex][field] = value;
+    const link = data.sections[sectionIndex].links[linkIndex];
 
-    if (field === "displayUrl" && !value.trim()) {
-      delete data.sections[sectionIndex].links[linkIndex].displayUrl;
+    if (field === "hidden") {
+      if (value) {
+        link.hidden = true;
+      } else {
+        delete link.hidden;
+      }
+    } else {
+      link[field] = value;
+
+      if (field === "displayUrl" && !String(value).trim()) {
+        delete link.displayUrl;
+      }
     }
 
     saveDraft(data, reRender);
+  }
+
+  function setSectionHidden(sectionIndex, hidden) {
+    const data = getMutableData();
+
+    if (hidden) {
+      data.sections[sectionIndex].hidden = true;
+    } else {
+      delete data.sections[sectionIndex].hidden;
+    }
+
+    saveDraft(data);
   }
 
   function removeLink(sectionIndex, linkIndex) {

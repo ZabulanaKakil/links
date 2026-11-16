@@ -1,6 +1,6 @@
 # Tanvir Nahian Links
 
-A one-page static site that lists your projects, contacts, and office websites. Tap or click any row to open the link.
+A one-page static site that lists your projects, games, and contacts. Tap or click any row to open the link.
 
 ## Live site
 

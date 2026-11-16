@@ -51,6 +51,9 @@ Each link uses an `"icon"` id from the built-in pool (loaded from [Iconify](http
 | `event` | Event / office site |
 | `office` | Office website |
 | `globe` | Generic website |
+| `game` | Game project |
+| `youtube` | YouTube |
+| `x` | X / Twitter |
 | `link` | Default / other |
 
 Example in `links.json`:
@@ -84,9 +87,13 @@ For usernames without a URL (e.g. Discord):
 
 | Section ID | Use for |
 |------------|---------|
+| `contacts` | Phone, email, WhatsApp, LinkedIn, portfolio |
+| `social` | Social profiles |
+| `games` | Published games |
 | `projects` | Projects online |
-| `contacts` | Email, phone, social |
 | `office` | Office websites |
+
+A section or link with `"hidden": true` stays in this file and in the admin editor, and is left off the public page. In the editor, use the Hidden checkbox. Hidden sections show a Hidden badge.
 
 4. Commit and push. GitHub Pages updates in ~1–2 minutes.
 

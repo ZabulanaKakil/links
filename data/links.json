@@ -1,7 +1,6 @@
 {
   "siteTitle": "Captain Tanvir Nahian Swapnil's Links",
   "sections": [
-    
     {
       "id": "contacts",
       "title": "Contacts",
@@ -31,34 +30,10 @@
           "icon": "gmail"
         },
         {
-          "name": "Facebook",
-          "url": "https://www.facebook.com/tanvir.nahian.96",
-          "displayUrl": "Tanvir Nahian",
-          "icon": "facebook"
-        },
-        {
           "name": "WhatsApp",
           "url": "https://wa.me/8801790136979",
           "displayUrl": "+8801790136979",
           "icon": "whatsapp"
-        },
-        {
-          "name": "Instagram",
-          "url": "https://www.instagram.com/tanvirnahian",
-          "displayUrl": "@tanvirnahian",
-          "icon": "instagram"
-        },
-        {
-          "name": "Discord",
-          "url": "https://discord.com/users/guavanovitch",
-          "displayUrl": "@guavanovitch",
-          "icon": "discord"
-        },
-        {
-          "name": "Facebook Page - Streaming",
-          "url": "https://www.facebook.com/guavanovitch",
-          "displayUrl": "Capt Guavano",
-          "icon": "facebook-page"
         },
         {
           "name": "Alternate Mobile",
@@ -75,8 +50,57 @@
       ]
     },
     {
+      "id": "social",
+      "title": "Social",
+      "links": [
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/tanvir.nahian.96",
+          "displayUrl": "Tanvir Nahian",
+          "icon": "facebook"
+        },
+        {
+          "name": "Capt Guavano (Facebook Page)",
+          "url": "https://www.facebook.com/guavanovitch",
+          "displayUrl": "Capt Guavano",
+          "icon": "facebook-page"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/tanvirnahian",
+          "displayUrl": "@tanvirnahian",
+          "icon": "instagram"
+        },
+        {
+          "name": "Discord",
+          "url": "https://discord.com/users/guavanovitch",
+          "displayUrl": "@guavanovitch",
+          "icon": "discord"
+        },
+        {
+          "name": "YouTube",
+          "url": "https://www.youtube.com/@captguavano",
+          "displayUrl": "@captguavano",
+          "icon": "youtube"
+        },
+        {
+          "name": "X (Twitter)",
+          "url": "https://x.com/guavanovitch",
+          "displayUrl": "@guavanovitch",
+          "icon": "x"
+        },
+        {
+          "name": "Instagram — Guava Teaches",
+          "url": "https://www.instagram.com/guavateaches",
+          "displayUrl": "@guavateaches",
+          "icon": "instagram"
+        }
+      ]
+    },
+    {
       "id": "office",
       "title": "Office Websites and Links",
+      "hidden": true,
       "links": [
         {
           "name": "Dreamers Den — Event Management (Website)",
@@ -121,27 +145,37 @@
         {
           "name": "Jurassic Park",
           "url": "https://makeplay.ai/p/qtqy58dege",
-          "icon": "globe"
+          "icon": "game"
         },
         {
           "name": "Jurassic Survival and TD",
           "url": "https://makeplay.ai/p/wrnu2j8nfz",
-          "icon": "globe"
+          "icon": "game"
         },
         {
           "name": "Jurassic Empires",
           "url": "https://makeplay.ai/p/m5p5du6k3g",
-          "icon": "globe"
+          "icon": "game"
         },
         {
           "name": "Age of Dinosaurs",
           "url": "https://makeplay.ai/p/823y8zr6uc",
-          "icon": "globe"
+          "icon": "game"
         },
         {
           "name": "Dream Agro and Shop",
           "url": "https://makeplay.ai/p/5j3scasc3z",
-          "icon": "globe"
+          "icon": "game"
+        },
+        {
+          "name": "Nostalgia Cricket",
+          "url": "https://makeplay.ai/p/65h7yrjngv",
+          "icon": "game"
+        },
+        {
+          "name": "Guavano Puzzle Arena",
+          "url": "https://makeplay.ai/p/t94gdkvtj3",
+          "icon": "game"
         }
       ]
     },
