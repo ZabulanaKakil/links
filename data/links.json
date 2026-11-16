@@ -186,7 +186,8 @@
         {
           "name": "worldnews",
           "url": "https://zabulanakakil.github.io/worldnews/",
-          "icon": "news"
+          "icon": "news",
+          "hidden": true
         }
       ]
     }
